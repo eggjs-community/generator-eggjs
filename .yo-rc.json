@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Suyi <Thonatos.Yang>",
+      "authorEmail": "thonatos.yang@gmail.com",
+      "authorUrl": "https://www.thonatos.com/"
+    }
+  }
+}
