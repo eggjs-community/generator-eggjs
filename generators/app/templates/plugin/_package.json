@@ -3,13 +3,9 @@
   "version": "1.0.0",
   "description": "<%- description %>",
   "eggPlugin": {
-    "name": "{{pluginName}}"
+    "name": "<%- pluginName %>"
   },
-  "keywords": [
-    "egg",
-    "eggPlugin",
-    "egg-plugin"
-  ],
+  "keywords": ["egg", "eggPlugin", "egg-plugin"],
   "dependencies": {},
   "devDependencies": {
     "autod": "^2.8.0",
@@ -35,11 +31,7 @@
     "pkgfiles": "egg-bin pkgfiles",
     "autod": "autod"
   },
-  "files": [
-    "app.js",
-    "agent.js",
-    "config"
-  ],
+  "files": ["app.js", "agent.js", "config"],
   "ci": {
     "version": "6, 8"
   },
