@@ -3,6 +3,8 @@ const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 const crypto = require('crypto');
+const rename = require('gulp-rename');
+const camelCase = require('camel-case');
 
 module.exports = class extends Generator {
   constructor(args, opts) {
@@ -55,7 +57,10 @@ module.exports = class extends Generator {
     ];
 
     return this.prompt(prompts).then(props => {
+      const name = camelCase(props.name);
       this.props = Object.assign(props, {
+        name: name,
+        pluginName: name,
         org: props.author
       });
     });
@@ -65,20 +70,27 @@ module.exports = class extends Generator {
     const name = this.props.name;
     const type = this.props.type;
 
+    // Fix name
+    this.registerTransformStream(
+      rename(path => {
+        path.basename = path.basename.replace(/({{name}})/g, name);
+        path.dirname = path.dirname.replace(/({{name}})/g, name);
+
+        if (path.basename === '_package' && path.extname === '.json') {
+          path.basename = 'package';
+        }
+        if (path.basename === '_' && path.extname === '.gitignore') {
+          path.basename = '.gitignore';
+          path.extname = '';
+        }
+      })
+    );
+
     // Copy and apply props
     this.fs.copyTpl(
       this.templatePath(type + '/**/*'),
       this.destinationRoot(name),
       this.props
-    );
-
-    // Rename .gitignore
-    this.fs.move(this.destinationPath('_.gitignore'), this.destinationPath('.gitignore'));
-
-    // Rename package.json
-    this.fs.move(
-      this.destinationPath('_package.json'),
-      this.destinationPath('package.json')
     );
   }
 
