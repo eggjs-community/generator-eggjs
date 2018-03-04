@@ -3,25 +3,22 @@
 const request = require('supertest');
 const mm = require('egg-mock');
 
-describe('test/lib/framework.test.js', () => {
+describe('test/<%- name %>.test.js', () => {
   let app;
   before(() => {
     app = mm.app({
-      baseDir: 'example',
-      customEgg: true,
+      baseDir: 'apps/<%- name %>-test',
     });
     return app.ready();
   });
 
   after(() => app.close());
-
   afterEach(mm.restore);
 
   it('should GET /', () => {
     return request(app.callback())
       .get('/')
-      .expect('framework-example_123456')
+      .expect('hi, <%- pluginName %>')
       .expect(200);
   });
 });
-
