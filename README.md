@@ -30,9 +30,9 @@ MIT © [Suyi &lt;Thonatos.Yang&gt;](https://www.thonatos.com/)
 
 [npm-image]: https://badge.fury.io/js/generator-eggjs.svg
 [npm-url]: https://npmjs.org/package/generator-eggjs
-[travis-image]: https://travis-ci.org/thonatos/generator-eggjs.svg?branch=master
-[travis-url]: https://travis-ci.org/thonatos/generator-eggjs
-[daviddm-image]: https://david-dm.org/thonatos/generator-eggjs.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/thonatos/generator-eggjs
-[coveralls-image]: https://coveralls.io/repos/thonatos/generator-eggjs/badge.svg
-[coveralls-url]: https://coveralls.io/r/thonatos/generator-eggjs
+[travis-image]: https://travis-ci.org/eggjs-community/generator-eggjs.svg?branch=master
+[travis-url]: https://travis-ci.org/eggjs-community/generator-eggjs
+[daviddm-image]: https://david-dm.org/eggjs-community/generator-eggjs.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/eggjs-community/generator-eggjs
+[coveralls-image]: https://coveralls.io/repos/eggjs-community/generator-eggjs/badge.svg
+[coveralls-url]: https://coveralls.io/r/eggjs-community/generator-eggjs
