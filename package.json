@@ -2,7 +2,7 @@
   "name": "generator-eggjs",
   "version": "1.0.0",
   "description": "Boilerplates for Egg.js",
-  "homepage": "https://github.com/thonatos/generator-eggjs",
+  "homepage": "https://github.com/eggjs-community/generator-eggjs",
   "author": {
     "name": "Suyi <Thonatos.Yang>",
     "email": "thonatos.yang@gmail.com",
@@ -64,6 +64,6 @@
     },
     "plugins": ["prettier"]
   },
-  "repository": "thonatos/generator-eggjs",
+  "repository": "eggjs-community/generator-eggjs",
   "license": "MIT"
 }
