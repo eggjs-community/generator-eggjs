@@ -22,6 +22,25 @@ describe('generator-eggjs:simple', () => {
   });
 });
 
+describe('generator-eggjs:ts', () => {
+  beforeAll(() => {
+    return helpers.run(path.join(__dirname, '../generators/app')).withPrompts({
+      type: 'ts',
+      name: 'ts',
+      description: 'simple project for ts'
+    });
+  });
+
+  it('creates files', () => {
+    assert.file([
+      'app/router.ts',
+      'app/controller/home.ts',
+      'config/plugin.ts',
+      '.gitignore'
+    ]);
+  });
+});
+
 describe('generator-eggjs:empty', () => {
   beforeAll(() => {
     return helpers.run(path.join(__dirname, '../generators/app')).withPrompts({

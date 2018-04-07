@@ -27,7 +27,7 @@ module.exports = class extends Generator {
         type: 'list',
         name: 'type',
         message: 'project type',
-        choices: ['simple', 'empty', 'plugin', 'framework'],
+        choices: ['simple', 'ts', 'empty', 'plugin', 'framework'],
         default: 'simple'
       },
       {
