@@ -3,3 +3,4 @@ coverage
 package-lock.json
 *.lock
 .idea
+.DS_Store
