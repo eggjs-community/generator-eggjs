@@ -1,14 +1,14 @@
 {
-  "name": "<%- name%>",
+  "name": "<%- name %>",
   "version": "1.0.0",
-  "description": "<%- description%>",
+  "description": "<%- description %>",
   "private": true,
   "egg": {
     "typescript": true
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-<%- name%>",
-    "stop": "egg-scripts stop --title=egg-server-<%- name%>",
+    "start": "egg-scripts start --daemon --title=egg-server-<%- name %>",
+    "stop": "egg-scripts stop --title=egg-server-<%- name %>",
     "dev": "egg-bin dev -r egg-ts-helper/register",
     "debug": "egg-bin debug -r egg-ts-helper/register",
     "test-local": "egg-bin test -r egg-ts-helper/register",
@@ -21,7 +21,7 @@
     "clean": "ets clean"
   },
   "dependencies": {
-    "egg": "^2.6.0",
+    "egg": "^2.6.1",
     "egg-scripts": "^2.6.0"
   },
   "devDependencies": {
@@ -49,6 +49,6 @@
     "url": ""
   },
   "eslintIgnore": ["coverage"],
-  "author": "<%- author%>",
+  "author": "<%- author %>",
   "license": "MIT"
 }
