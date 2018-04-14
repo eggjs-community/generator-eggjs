@@ -1,5 +1,3 @@
-'use strict';
-
 import { EggAppConfig, PowerPartial } from 'egg';
 
 // for config.{env}.ts
@@ -8,7 +6,6 @@ export type DefaultConfig = PowerPartial<EggAppConfig & BizConfig>;
 // app special config scheme
 export interface BizConfig {
   sourceUrl: string;
-  middleware: string[];
 }
 
 export default (appInfo: EggAppConfig) => {
@@ -19,7 +16,7 @@ export default (appInfo: EggAppConfig) => {
 
   // override config from framework / plugin
   // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + '_<%- keys%>';
+  config.keys = appInfo.name + '_<%- keys %>';
 
   // add your config here
   config.middleware = [];
