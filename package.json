@@ -30,7 +30,7 @@
     "camel-case": "^3.0.0",
     "chalk": "^1.1.3",
     "gulp-rename": "^1.2.2",
-    "yeoman-generator": "^1.0.0",
+    "yeoman-generator": "^2.0.0",
     "yosay": "^2.0.0"
   },
   "jest": {
