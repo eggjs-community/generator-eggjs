@@ -38,6 +38,7 @@
     "testPathIgnorePatterns": ["/node_modules/", "/generators/app/templates/"]
   },
   "scripts": {
+    "tool": "node tool",
     "prepublish": "nsp check",
     "pretest": "eslint .",
     "precommit": "lint-staged",

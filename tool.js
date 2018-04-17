@@ -42,3 +42,4 @@ forEachTemplate()
   .forEach(function(item) {
     generatorFile(item);
   });
+console.log('tool run over.');
