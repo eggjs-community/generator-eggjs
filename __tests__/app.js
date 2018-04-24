@@ -65,7 +65,7 @@ describe('generator-eggjs:plugin', () => {
   });
 
   it('creates files', () => {
-    assert.file(['README.md', '.gitignore']);
+    assert.file(['README.md', '.gitignore', 'test/plugin.test.js']);
   });
 });
 
