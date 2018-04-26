@@ -1,6 +1,6 @@
 {
   "name": "generator-eggjs",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "description": "Boilerplates for Egg.js",
   "homepage": "https://github.com/eggjs-community/generator-eggjs",
   "author": {
@@ -8,9 +8,16 @@
     "email": "thonatos.yang@gmail.com",
     "url": "https://www.thonatos.com/"
   },
-  "files": ["generators"],
+  "files": [
+    "generators"
+  ],
   "main": "generators/index.js",
-  "keywords": ["Egg.js", "eggjs", "egg", "yeoman-generator"],
+  "keywords": [
+    "Egg.js",
+    "eggjs",
+    "egg",
+    "yeoman-generator"
+  ],
   "devDependencies": {
     "coveralls": "^3.0.0",
     "eslint": "^4.19.1",
@@ -36,7 +43,10 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "testPathIgnorePatterns": ["/node_modules/", "/generators/app/templates/"]
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/generators/app/templates/"
+    ]
   },
   "scripts": {
     "tool": "node tool",
@@ -46,11 +56,20 @@
     "test": "jest"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"],
-    "*.json": ["prettier --write", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "eslintConfig": {
-    "extends": ["xo", "prettier"],
+    "extends": [
+      "xo",
+      "prettier"
+    ],
     "env": {
       "jest": true,
       "node": true
@@ -64,7 +83,9 @@
         }
       ]
     },
-    "plugins": ["prettier"]
+    "plugins": [
+      "prettier"
+    ]
   },
   "repository": "eggjs-community/generator-eggjs",
   "license": "MIT"
