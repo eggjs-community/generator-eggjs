@@ -23,6 +23,14 @@ $ npm start
 $ npm stop
 ```
 
+### Docker
+
+```bash
+$ docker run -p 7001:7001 <%- name %>
+```
+
+***容器镜像需在编译镜像后使用***
+
 ### 单元测试
 
 - [egg-bin] 内置了 [mocha], [thunk-mocha], [power-assert], [istanbul] 等框架，让你可以专注于写单元测试，无需理会配套工具。
@@ -34,6 +42,6 @@ $ npm stop
 - 使用 `npm run lint` 来做代码风格检查。
 - 使用 `npm test` 来执行单元测试。
 - 使用 `npm run autod` 来自动检测依赖更新，详细参见 [autod](https://www.npmjs.com/package/autod) 。
-
+- 使用 `npm run docker-build` 编译 Docker 镜像。
 
 [egg]: https://eggjs.org
