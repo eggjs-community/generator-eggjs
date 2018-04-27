@@ -4,7 +4,7 @@ const chalk = require('chalk');
 const yosay = require('yosay');
 const crypto = require('crypto');
 const rename = require('gulp-rename');
-const camelCase = require('camel-case');
+const changeCase = require('change-case');
 
 module.exports = class extends Generator {
   constructor(args, opts) {
@@ -57,7 +57,7 @@ module.exports = class extends Generator {
     ];
 
     return this.prompt(prompts).then(props => {
-      const name = camelCase(props.name);
+      const name = changeCase.camelCase(props.name);
       this.props = Object.assign(props, {
         name: name,
         pluginName: name,

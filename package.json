@@ -8,16 +8,9 @@
     "email": "thonatos.yang@gmail.com",
     "url": "https://www.thonatos.com/"
   },
-  "files": [
-    "generators"
-  ],
+  "files": ["generators"],
   "main": "generators/index.js",
-  "keywords": [
-    "Egg.js",
-    "eggjs",
-    "egg",
-    "yeoman-generator"
-  ],
+  "keywords": ["Egg.js", "eggjs", "egg", "yeoman-generator"],
   "devDependencies": {
     "coveralls": "^3.0.0",
     "eslint": "^4.19.1",
@@ -34,8 +27,8 @@
     "yeoman-test": "^1.7.0"
   },
   "dependencies": {
-    "camel-case": "^3.0.0",
     "chalk": "^1.1.3",
+    "change-case": "^3.0.2",
     "fs-plus": "^3.0.2",
     "gulp-rename": "^1.2.2",
     "yeoman-generator": "^1.0.0",
@@ -43,33 +36,21 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/generators/app/templates/"
-    ]
+    "testPathIgnorePatterns": ["/node_modules/", "/generators/app/templates/"]
   },
   "scripts": {
     "tool": "node tool",
     "prepublish": "nsp check",
     "pretest": "eslint .",
     "precommit": "lint-staged",
-    "test": "jest"
+    "test": "node $NODE_DEBUG_OPTION node_modules/.bin/jest"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.js": ["eslint --fix", "git add"],
+    "*.json": ["prettier --write", "git add"]
   },
   "eslintConfig": {
-    "extends": [
-      "xo",
-      "prettier"
-    ],
+    "extends": ["xo", "prettier"],
     "env": {
       "jest": true,
       "node": true
@@ -83,9 +64,7 @@
         }
       ]
     },
-    "plugins": [
-      "prettier"
-    ]
+    "plugins": ["prettier"]
   },
   "repository": "eggjs-community/generator-eggjs",
   "license": "MIT"
